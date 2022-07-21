@@ -1,0 +1,70 @@
+.hat-advantages {
+	
+	margin-bottom: 163px;
+	&__items {
+		@apply flex justify-between;
+	}
+	&__item {
+		margin-bottom: 40px;
+	}
+
+	&__head {
+		@apply flex items-center;
+		font-family: var(--font-play);
+		font-style: italic;
+		font-weight: 400;
+		font-size: 38px;
+		line-height: 51px;
+		margin-bottom: 29px;
+		.hat-decorator {
+			margin-right: 13px;
+		}
+
+	}
+
+	&__body {
+		font-family: var(--font-poppins);
+		max-width: 285px;
+		padding-left: 52px;
+		margin-right: 0;
+		color: #9D8888;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 165.9%;
+	}
+}
+
+
+@media (max-width: 385px) {
+	.hat-advantages {
+		@apply flex-col;
+		margin-bottom: 20px;
+		padding-left: 44px;
+		&__items {
+			@apply flex-col;
+		}
+		&__left {
+			flex: 1;
+		}
+	
+		&__right {
+			margin-left: 0;
+			
+		}
+		&__category {
+			
+			font-weight: 300;
+			font-size: 14px;
+			line-height: 21px;
+		}
+	
+		&__title {
+			
+			font-size: 66.3752px;
+			line-height: 72px;
+			margin-bottom: 0;
+		}
+	 }
+
+}

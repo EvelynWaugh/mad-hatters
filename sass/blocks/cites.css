@@ -1,0 +1,71 @@
+.hat-cites {
+@apply relative flex justify-center items-center;
+height: 518px;
+margin-top: 113px;
+}
+
+.cite-circle {
+	@apply absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	
+	border-radius: 50%;
+	height: 341px;
+	width: 341px;
+	outline-offset: 88px;
+	outline: 1px solid rgba(35,36,44, 0.1);
+	box-shadow: 0px 0px 64px #EDD5C8;
+	z-index: -1;
+}
+.cite-item {
+	@apply flex items-center;
+	
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 64px;
+	font-family: var(--font-play);
+	color: var(--color-main);
+}
+.cite-item svg:first-of-type {
+	margin-right: -30px;
+    margin-top: -50px;
+}
+.cite-item svg:nth-of-type(2) {
+	margin-left: -25px;
+    margin-bottom: -50px;
+}
+
+@media (max-width: 385px) {
+	.hat-cites {
+		
+		height: 485px;
+		margin-top: 45px;
+		}
+		.cite-item {
+			@apply flex-col;
+			
+			font-size: 49.2486px;
+			line-height: 105.5%;
+			span {
+				text-align: center;
+			}
+		
+		}
+		.cite-circle {
+	
+			height: 254px;
+			width: 254px;
+			outline-offset: 99px;
+			
+		}
+		.cite-item svg:first-of-type {
+			margin-right: 0;
+			
+		}
+		.cite-item svg:nth-of-type(2) {
+			margin-left: 0;
+			margin-bottom: -30px;
+			margin-top: 20px;
+		}
+}

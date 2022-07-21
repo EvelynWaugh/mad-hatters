@@ -1,0 +1,134 @@
+.top-banner {
+	@apply flex items-center;
+	margin-top: 127px;
+	margin-bottom: 100px;
+	height: 533px;
+	&__left {
+		flex: 1;
+		width: 60%;
+	}
+
+	&__right {
+		@apply relative;
+		width: 40%;
+		height: 100%;
+		padding-right: 140px;
+		margin-top: 50px;
+	}
+
+	&__tag {
+		font-family: var(--font-poppins);
+		color: var(--color-secondary);
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 24px;
+	}
+
+	&__title {
+		font-family: var(--font-play);
+		color: var(--color-main);
+		font-weight: 700;
+		font-size: 102px;
+		line-height: 110px;
+		margin-bottom: 25px;
+		span {
+			@apply block;
+		}
+		svg {
+			@apply inline-block;
+		}
+	}
+
+	&__images {
+		@apply relative;
+		img {
+			@apply relative block z-20;
+			margin: 0 auto;
+			
+		}
+		img:nth-of-type(2) {
+			@apply absolute z-10;
+			top: 40%;
+			left: 50%;
+		}
+	}
+	
+}
+.banner-circle {
+	@apply absolute;
+	left: 10%;
+	top: calc( 50% + 15px );
+	transform: translate(-50%, -50%);
+	background: rgba(250, 226, 214, 0.4);
+	border-radius: 50%;
+	height: 246px;
+	width: 246px;
+	outline-offset: 126px;
+	outline: 1px solid rgba(35,36,44, 0.1);
+	z-index: -1;
+}
+
+@media (max-width: 385px) {
+	.top-banner {
+		@apply flex-col;
+		margin-top: 28px;
+		margin-bottom: 47px;
+		height: auto;
+		&__left {
+			@apply order-2;
+			width: 100%;
+			margin-top: 60px;
+			padding-left: 24px;
+		}
+	
+		&__right {
+			@apply relative order-1;
+			width: 100%;
+			height: 100%;
+			padding-right: 0;
+			margin-top: 0;
+		}
+
+		&__title {
+			
+			font-size: 48px;
+			line-height: 56px;
+			margin-bottom: 15px;
+
+			svg {
+				width: 27px;
+			}
+		
+		}
+
+		&__images {
+			@apply relative;
+			img {
+				max-width: 173px;
+				margin-left: 67px;
+				
+			}
+			img:nth-of-type(2) {
+				
+				max-width: 149px;
+				top: 40%;
+				left: calc( 50% - 33px );
+				margin-left: 0;
+			}
+		}
+	}	
+
+	.banner-circle {
+		@apply absolute;
+		left: 75px;
+		top: calc( 50% + 75px );
+		transform: translate(-50%, -50%);
+
+		height: 166px;
+		width: 166px;
+		outline-offset: 89px;
+		outline: 1px solid rgba(35,36,44, 0.1);
+		z-index: -1;
+	}
+}
+

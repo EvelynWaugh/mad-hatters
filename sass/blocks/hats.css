@@ -1,0 +1,164 @@
+.hat-posts {
+	margin-top: 217px;
+	& > span {
+		@apply block text-center;
+		color: var(--color-secondary);
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 24px;
+		margin-bottom: 9px;
+	}
+
+	& > h3 {
+		@apply block text-center;
+		color: var(--color-main);
+		font-family: var(--font-play);
+		font-weight: 700;
+		font-size: 102px;
+		line-height: 110px;
+		margin-bottom: 128px;
+	}
+
+	&__wrapper {
+		@apply grid;
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 119px;
+	}
+
+	&__left {
+		flex: 1;
+	}
+
+	&__right {
+		margin-left: 119px;
+		margin-top: 83px;
+		flex: 1;
+	}
+	&__block {
+		/* margin-bottom: 83px; */
+	}
+	&__block:nth-of-type(2n) {
+		margin-top: 83px;
+	}
+	&__image {
+
+	}
+	&__title {
+		@apply italic text-center;
+		font-family: var(--font-play);
+		color: var(--color-secondary);
+		font-weight: 400;
+		font-size: 48px;
+		line-height: 64px;
+		margin-bottom: 10px;
+	}
+	&__text {
+		@apply text-center;
+		font-family: var(--font-poppins);
+		color: var(--color-secondary);
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 165.9%;
+		max-width: 360px;
+		margin: 0 auto;
+	}
+	&__content {
+		padding: 18px 0 28px;
+		background: var(--bg-secondary);
+	}
+
+	&__more {
+		@apply relative;
+		margin-top: 40px;
+	}
+
+	&__more-button {
+		@apply relative flex justify-center text-center;
+		width: 100%;
+		font-family: var(--font-play);
+		font-weight: 900;
+		font-size: 36.8465px;
+		line-height: 49px;
+	}
+	&__more-button::before {
+		content: '';
+		@apply block absolute;
+		top: 58%;
+		left: 0;
+		height: 1px;
+		background: var(--color-secondary);
+		width: 39%;
+		transform: translateY(-50%);
+		
+	}
+	&__more-button::after {
+		content: '';
+		@apply block absolute;
+		top: 58%;
+		right: 0;
+		height: 1px;
+		width: 38%;
+		background: var(--color-secondary);
+		transform: translateY(-50%);
+	}
+}
+.more-layer {
+	@apply absolute;
+	top: 5px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: rgba(35,36,44, 0.04);
+	font-family: var(--font-play);
+	font-weight: 700;
+	font-size: 182.38px;
+	line-height: 243px;
+	z-index: -1;
+}
+
+
+@media (max-width: 385px) {
+	.hat-posts {
+		margin-top: 147px;
+		
+		& > h3 {
+		
+			font-size: 66.3752px;
+			line-height: 72px;
+			margin-bottom: 40px;
+		}
+		&__title {
+		
+			font-size: 28.1917px;
+			line-height: 38px;
+			margin-bottom: 5px;
+		}
+		&__text {
+			
+			font-size: 9.39722px;
+			line-height: 165.9%;
+			
+		}
+		&__block {
+			margin-bottom: 39px;
+		}
+		&__content {
+			padding: 10px 40px 20px;
+			
+		}
+		&__wrapper {
+			@apply block;
+			padding: 0 34px;
+		}
+		&__block:nth-of-type(2n) {
+			margin-top: 0;
+		}
+	 }
+
+	 .more-layer {
+		
+		font-size: 143.125px;
+		line-height: 191px;
+		
+	}
+
+}
